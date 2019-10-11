@@ -7,8 +7,8 @@ passport.use(
         callbackURL: '/auth/google/redirect',
         clientID: keys.google.clientID,
         clientSecret: keys.google.clientSecret
-    }, () => {
-        console.log('hekki');
+    }, (accessToken, refreshToken, profile, done) => {
+        console.log(profile);
     }) 
 )
 
